@@ -16,6 +16,7 @@
 		4A1FE5FE2BF9B31500DA5CAE /* HourlyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FE5FD2BF9B31500DA5CAE /* HourlyCustomCell.swift */; };
 		4A1FE6282BFA569500DA5CAE /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1FE6272BFA569500DA5CAE /* Kingfisher */; };
 		4A1FE62C2BFAB55E00DA5CAE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FE62B2BFAB55E00DA5CAE /* LocationManager.swift */; };
+		4A54E5B52BFBD65100D615C1 /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 4A54E5B42BFBD65100D615C1 /* Reachability */; };
 		4AC8EFB72BF8B37E00067C44 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4AC8EFB62BF8B37E00067C44 /* Alamofire */; };
 		4AC8EFBC2BF8B6F400067C44 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8EFBB2BF8B6F400067C44 /* WeatherResponse.swift */; };
 		4AC8EFC32BF8F83B00067C44 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8EFC22BF8F83B00067C44 /* HomeScreen.swift */; };
@@ -46,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1FE6282BFA569500DA5CAE /* Kingfisher in Frameworks */,
+				4A54E5B52BFBD65100D615C1 /* Reachability in Frameworks */,
 				4AC8EFB72BF8B37E00067C44 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +206,7 @@
 			packageProductDependencies = (
 				4AC8EFB62BF8B37E00067C44 /* Alamofire */,
 				4A1FE6272BFA569500DA5CAE /* Kingfisher */,
+				4A54E5B42BFBD65100D615C1 /* Reachability */,
 			);
 			productName = "Sky View";
 			productReference = 4A06ED212BDD7C36000DE860 /* Sky View.app */;
@@ -236,6 +239,7 @@
 			packageReferences = (
 				4AC8EFB52BF8B37E00067C44 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				4A1FE6262BFA569500DA5CAE /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4A54E5B32BFBD65100D615C1 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
 			);
 			productRefGroup = 4A06ED222BDD7C36000DE860 /* Products */;
 			projectDirPath = "";
@@ -496,6 +500,14 @@
 				minimumVersion = 7.11.0;
 			};
 		};
+		4A54E5B32BFBD65100D615C1 /* XCRemoteSwiftPackageReference "Reachability.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		4AC8EFB52BF8B37E00067C44 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -511,6 +523,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4A1FE6262BFA569500DA5CAE /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		4A54E5B42BFBD65100D615C1 /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A54E5B32BFBD65100D615C1 /* XCRemoteSwiftPackageReference "Reachability.swift" */;
+			productName = Reachability;
 		};
 		4AC8EFB62BF8B37E00067C44 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

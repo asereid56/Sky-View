@@ -15,7 +15,7 @@ struct CustomCell: View {
     var body: some View {
         
         HStack {
-            Text(formatDay(forecastDay.dateEpoch ?? 0))
+            Text(formatDay(Double(forecastDay.dateEpoch ?? 0 )))
                 .foregroundColor(color)
                 .font(.system(size: 22))
                 
@@ -26,7 +26,7 @@ struct CustomCell: View {
                 .frame(width: 35, height: 35)
     
             Spacer()
-            Text("\(formatTemperature(forecastDay.day?.mintemp ?? 0)) - \(formatTemperature(forecastDay.day?.maxtemp ?? 0))°C")
+            Text("\(formatTemperature(forecastDay.day?.mintempC ?? 0)) - \(formatTemperature(forecastDay.day?.maxtempC ?? 0))°C")
                 .font(.system(size: 20))
                 .foregroundColor(color)
         }
@@ -36,11 +36,11 @@ struct CustomCell: View {
         
         
     }
-    func formatTemperature(_ temp: Double) -> String {
+    func formatTemperature(_ temp: TimeInterval) -> String {
             return String(format: "%.1f", temp)
         }
     
-    func formatDay(_ dateEpoch: TimeInterval) -> String {
+    func formatDay(_ dateEpoch: Double) -> String {
            let calendar = Calendar.current
            let currentDay = calendar.component(.day, from: Date())
            let forecastDay = calendar.component(.day, from: Date(timeIntervalSince1970: dateEpoch))

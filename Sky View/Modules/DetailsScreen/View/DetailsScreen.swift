@@ -77,7 +77,7 @@ struct DetailsScreen: View {
         let calendar = Calendar.current
         let currentDay = calendar.component(.day, from: Date())
         
-        let forecastDay = calendar.component(.day, from: Date(timeIntervalSince1970: day.dateEpoch ?? 0))
+        let forecastDay = calendar.component(.day, from: Date(timeIntervalSince1970: TimeInterval(day.dateEpoch ?? 0)))
         
         
         if currentDay == forecastDay {

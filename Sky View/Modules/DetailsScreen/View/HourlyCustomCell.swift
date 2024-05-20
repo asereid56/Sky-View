@@ -25,7 +25,7 @@ struct HourlyCustomCell: View {
                 .frame(width: 45 ,height: 45 )
             
             Spacer()
-            Text("\(formatTemperature(hour.temp ?? 0)) °C")
+            Text("\(formatTemperature(hour.tempC ?? 0)) °C")
                 .font(.system(size: 22))
         }
         .shadow(radius: 2)
@@ -45,8 +45,8 @@ struct HourlyCustomCell: View {
             
             let currentHour = calendar.component(.hour, from: Date())
             
-            let currentDayEpoch = Date(timeIntervalSince1970: day.dateEpoch ?? 0)
-            let hourDayEpoch = Date(timeIntervalSince1970: day.dateEpoch ?? 0)
+            let currentDayEpoch = Date(timeIntervalSince1970: TimeInterval(day.dateEpoch ?? 0))
+            let hourDayEpoch = Date(timeIntervalSince1970: TimeInterval(day.dateEpoch ?? 0))
             
             if calendar.isDate(currentDayEpoch, inSameDayAs: Date()) {
                 if hour == currentHour {
