@@ -11,7 +11,7 @@ import SwiftUI
 struct Sky_ViewApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeScreen(viewModel: HomeScreenViewModel(network: NetworkService(), locationManager: LocationManager()))
         }
     }
 }
